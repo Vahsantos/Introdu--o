@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de IMC</title>
+</head>
+
+<body>
+    <script>
+        // Calculadora de IMC - Valeria
+
+        {// Inicia o escopo
+            const peso = Number(prompt("Digite seu peso."));
+            const altura = Number(prompt("Digite sua altura."));
+
+            // Formula do IMC -> peso / (altura * altura) ou peso / (altura)²
+
+            const imc = peso / (altura * altura);
+
+            const abaixoDoPeso = imc <= 18.5;
+
+            if (abaixoDoPeso) {
+                alert("Abaixo do peso, você precisa ganhar alguns quilos, para seu peso adequado.")
+            }
+
+            const pesoIdeal = imc >= 18.6 && imc <= 24.9;
+
+            if (pesoIdeal) {
+                alert("Parabéns, seu peso está na faixa ideal");
+            }
+
+            const levementeAcima = imc >= 25 && imc <= 29.9;
+
+            if (levementeAcima) {
+                alert("Você está levemente acima do peso");
+            }
+
+            const obesidadeGrauI = imc >= 30 && imc <=34.9;
+          
+            if (obesidadeGrauI) {
+                alert("Você está com Obesidade grau I");
+            }
+
+            const obesidadeGrauII = imc >= 35 && imc <= 39.9;
+
+            if (obesidadeGrauII) {
+                alert("Você esta com Obesidade grau II (severa)")
+            }
+ 
+            const obesidadeIII = imc >= 40 ;
+            if (obesidadeIII) {
+                alert("Você esta com obesidade III (mórbida)")
+            }
+
+        }; // fim do escopo
+
+        {// Outro escopo
+
+        };
+    </script>
+</body>
+
+</html>
